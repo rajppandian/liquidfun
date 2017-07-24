@@ -6,6 +6,9 @@ function b2DistanceJoint(def) {
   this.next = null;
 }
 
+b2DistanceJoint.prototype = Object.create(b2Joint.prototype);
+
+
 var b2DistanceJointDef_Create = Module.cwrap("b2DistanceJointDef_Create",
   'number',
   ['number',
